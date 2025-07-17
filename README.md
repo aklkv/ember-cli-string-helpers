@@ -3,32 +3,16 @@
 
 String helpers for Ember. Extracted from the great [DockYard's ember-composable-helpers](https://github.com/DockYard/ember-composable-helpers/).
 
-To install:
+## Compatibility
 
-```no-highlight
+* Ember.js v3.28 or above
+* Ember CLI v4.4 or above
+* Node.js v20 or above
+
+## Installation
+
+```
 ember install ember-cli-string-helpers
-```
-
-## Configuration
-
-If you don't need all the helpers, you can specify which to whitelist or blacklist using `only` or `except` within your `ember-cli-build.js`:
-
-```js
-module.exports = function(defaults) {
-  var app = new EmberApp(defaults, {
-    'ember-cli-string-helpers': {
-      only: ['dasherize', 'underscore'],
-      except: ['titleize', 'capitalize']
-    }
-  });
-};
-```
-
-Both `only` and `except` can be safely used together (the addon computes the diff), although it's best if you only use one for your own sanity.
-
-```js
-except: ['camelize'] // imports all helpers except `camelize`
-only: ['camelize'] // imports only `camelize`
 ```
 
 ## Available helpers
@@ -205,6 +189,6 @@ See also: [Ember `w` documentation](https://api.emberjs.com/ember/release/classe
 * [ember-composable-helpers](https://github.com/dockyard/ember-composable-helpers)
 * [ember-truth-helpers](https://github.com/jmurphyau/ember-truth-helpers)
 
-## Legal
+## License
 
-[Licensed under the MIT license](http://www.opensource.org/licenses/mit-license.php)
+This project is licensed under the [MIT License](LICENSE.md).
