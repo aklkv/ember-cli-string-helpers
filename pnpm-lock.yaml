@@ -7768,7 +7768,7 @@ snapshots:
 
   '@types/glob@9.0.0':
     dependencies:
-      glob: 8.1.0
+      glob: 10.4.5
 
   '@types/http-errors@2.0.5': {}
 
@@ -7784,7 +7784,7 @@ snapshots:
 
   '@types/minimatch@6.0.0':
     dependencies:
-      minimatch: 7.4.6
+      minimatch: 9.0.5
 
   '@types/minimist@1.2.5': {}
 
