@@ -5,14 +5,18 @@ const { embroiderSafe, embroiderOptimized } = require('@embroider/test-setup');
 
 module.exports = async function () {
   return {
-    useYarn: true,
+    usePnpm: true,
     scenarios: [
       {
         name: 'ember-lts-3.28',
         npm: {
           devDependencies: {
+            '@ember/string': '^3.1.1',
             '@ember/test-helpers': '^2.4.0',
+            'ember-cli': '^4.12.0',
+            'ember-exam': '^6.1.0',
             'ember-qunit': '^5.1.5',
+            'ember-resolver': '^10.0.0',
             'ember-source': '^3.28.0',
           },
         },
@@ -21,8 +25,12 @@ module.exports = async function () {
         name: 'ember-lts-4.4',
         npm: {
           devDependencies: {
+            '@ember/string': '^3.1.1',
             '@ember/test-helpers': '^2.4.0',
+            'ember-cli': '^4.12.0',
+            'ember-exam': '^6.1.0',
             'ember-qunit': '^5.1.5',
+            'ember-resolver': '^11.0.0',
             'ember-source': '~4.4.0',
           },
         },
@@ -31,7 +39,27 @@ module.exports = async function () {
         name: 'ember-lts-4.8',
         npm: {
           devDependencies: {
+            '@ember/string': '^3.1.1',
+            'ember-cli': '^4.12.0',
+            'ember-resolver': '^11.0.0',
             'ember-source': '~4.8.0',
+          },
+        },
+      },
+      {
+        name: 'ember-lts-4.12',
+        npm: {
+          devDependencies: {
+            '@ember/string': '^3.1.1',
+            'ember-source': '~4.12.0',
+          },
+        },
+      },
+      {
+        name: 'ember-lts-5.4',
+        npm: {
+          devDependencies: {
+            'ember-source': '~5.4.0',
           },
         },
       },
