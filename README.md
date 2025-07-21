@@ -221,6 +221,7 @@ See also: [Ember `w` documentation](https://api.emberjs.com/ember/release/classe
 ## See also
 
 * [ember-composable-helpers](https://github.com/dockyard/ember-composable-helpers)
+* [ember-math-helpers](https://github.com/RobbieTheWagner/ember-math-helpers)
 * [ember-truth-helpers](https://github.com/jmurphyau/ember-truth-helpers)
 
 ## License
