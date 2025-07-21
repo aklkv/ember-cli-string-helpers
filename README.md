@@ -7,6 +7,9 @@
 
 String helpers for Ember. Extracted from the great [DockYard's ember-composable-helpers](https://github.com/DockYard/ember-composable-helpers/).
 
+> [!WARNING]  
+> If you are using single file components you most likely do not need this addon as it's just a wrapper on `@ember/string` methods. You can import most methods directly from `@ember/string` in your components, or migrate to something like [change-case](https://www.npmjs.com/package/change-case).
+
 ## Compatibility
 
 * Ember.js v3.28 or above
@@ -39,6 +42,8 @@ ember install ember-cli-string-helpers
       - [`underscore`](#underscore)
       - [`uppercase`](#uppercase)
       - [`w`](#w)
+  - [Glint usage](#glint-usage)
+  - [Template Tag usage](#template-tag-usage)
   - [See also](#see-also)
   - [License](#license)
 
@@ -219,11 +224,13 @@ See also: [Ember `w` documentation](https://api.emberjs.com/ember/release/classe
 **[⬆️ back to top](#available-helpers)**
 
 ## Glint usage
+
 If you are using [Glint](https://typed-ember.gitbook.io/glint/) and `environment-ember-loose`, you can add all the helpers to your app at once by adding
 
 ```ts
 import type EmberCliStringHelpersRegistry from 'ember-cli-string-helpers/template-registry';
 ```
+
 to your app's e.g. `types/glint.d.ts` file, and making sure your registry extends from EmberCliStringHelpersRegistry:
 
 ```ts
@@ -233,6 +240,16 @@ declare module '@glint/environment-ember-loose/registry' {
       // ...
     }
 }
+```
+
+## Template Tag usage
+
+```gjs
+import { camelize } from 'ember-cli-string-helpers';
+
+<template>
+  {{camelize "hello jim bob"}}
+</template>
 ```
 
 ## See also
