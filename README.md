@@ -218,6 +218,23 @@ See also: [Ember `w` documentation](https://api.emberjs.com/ember/release/classe
 
 **[⬆️ back to top](#available-helpers)**
 
+## Glint usage
+If you are using [Glint](https://typed-ember.gitbook.io/glint/) and `environment-ember-loose`, you can add all the helpers to your app at once by adding
+
+```ts
+import type EmberCliStringHelpersRegistry from 'ember-cli-string-helpers/template-registry';
+```
+to your app's e.g. `types/glint.d.ts` file, and making sure your registry extends from EmberCliStringHelpersRegistry:
+
+```ts
+declare module '@glint/environment-ember-loose/registry' {
+  export default interface Registry
+    extends EmberCliStringHelpersRegistry {
+      // ...
+    }
+}
+```
+
 ## See also
 
 * [ember-composable-helpers](https://github.com/dockyard/ember-composable-helpers)
