@@ -1,7 +1,7 @@
 import { helper } from '@ember/component/helper';
 import { isHTMLSafe } from '@ember/template';
 
-export function truncate([string, characterLimit = 140, useEllipsis = true]: [
+function truncate([string, characterLimit = 140, useEllipsis = true]: [
   string,
   number,
   boolean,

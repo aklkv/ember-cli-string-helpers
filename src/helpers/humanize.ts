@@ -7,9 +7,7 @@ const regex = /_+|-+/g;
 const replacement = ' ';
 
 // The substituted value will be contained in the result variable
-export function humanize([string]: [
-  string | SafeString | null | undefined,
-]): string {
+function humanize([string]: [string | SafeString | null | undefined]): string {
   if (isHTMLSafe(string)) {
     string = string.toString();
   }
